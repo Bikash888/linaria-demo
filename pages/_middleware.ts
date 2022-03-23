@@ -1,15 +1,17 @@
 
 
-import type { NextRequest } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 
 
-const BLOCKED_COUNTRY = 'JA'
+const BLOCKED_COUNTRY = 'NP'
 
 export function middleware(req: NextRequest) {
-  const country = req.geo.country || 'US'
+  const country = req.geo.country || 'NP'
 
-  if (country === BLOCKED_COUNTRY) {
-    return new Response('Blocked for legal reasons', { status: 451 })
+  if (req.nextUrl.pathname=="/japan") {
+    return NextResponse.rewrite("/japan")
   }
-  return new Response(`Greetings from ${country}, where you are not blocked.`)
+  if (country == BLOCKED_COUNTRY) {
+    return NextResponse.rewrite("/nepal")
+  }
 }
