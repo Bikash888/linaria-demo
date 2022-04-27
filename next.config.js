@@ -1,6 +1,5 @@
-const withLinaria = require('next-linaria');
-module.exports = withLinaria({
-  linaria: {
-    /* linaria options here */
+module.exports = {
+  images: {
+    domains: ["links.papareact.com", "image.tmdb.org"],
   },
-});
+};
