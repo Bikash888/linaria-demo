@@ -7,6 +7,7 @@ import requests from "../utils/request";
 const index = ({ results }) => {
   return (
     <div>
+      <li>s</li>
       <Header />
       <Nav />
       <Results results={results} />
