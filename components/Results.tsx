@@ -10,7 +10,7 @@ const Results = ({ results }) => {
       ))}
       <Image
         alt="asjhdbasjh"
-        src="/graph.png"
+        src="/graph.jpg"
         height="500"
         width="300"
         layout="responsive"
