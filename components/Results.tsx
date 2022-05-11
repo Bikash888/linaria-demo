@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import Thumbnail from "./atoms/Thumbnail";
 
@@ -7,6 +8,7 @@ const Results = ({ results }) => {
       {results?.map((result) => (
         <Thumbnail key={result?.id} result={result} />
       ))}
+      <Image src="/graph.png" height="500" width="300" layout="responsive" />
     </div>
   );
 };
